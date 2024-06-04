@@ -1,0 +1,91 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% extends 'Header_Footer.html' %}
+{% block AdminHome %}
+{% load static %}
+
+	<!--navigation-end-->
+	<!--script-for-menu-->
+		<script>
+			$("span.menu").click(function(){
+				$(" ul.navig").slideToggle("slow" , function(){
+				});
+			});
+		</script>
+	<!--script-for-menu-->
+
+	
+	<!--banner-starts-->
+	<div class="banner">
+		<section class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+					<li>
+					<div class="banner1">
+						<div class="container">
+							<div class="banner-text">
+								<p>Baby Care</p>
+								<h3>We are caring your baby</h3>
+							</div>
+						</div>
+					</div>
+					</li>
+					<li>
+					<div class="banner2">
+						<div class="container">
+							<div class="banner-text">
+								<p>Baby Care</p>
+								<h3>Caring your lotus</h3>
+							</div>
+						</div>
+					</div>
+					</li>
+					<li>
+					<div class="banner1">
+						<div class="container">
+							<div class="banner-text">
+								<p>Baby Care</p>
+								<h3>Caring your kids</h3>
+							</div>
+						</div>
+					</div>
+					</li>
+					<li>
+					<div class="banner2">
+						<div class="container">
+							<div class="banner-text">
+								<p>Baby Care</p>
+								<h3>Also have neutresious food here</h3>
+							</div>
+						</div>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		
+	</div>
+	<!--banner-end-->
+
+
+	<!--FlexSlider-->
+	<link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="screen" />
+	<script defer src="{% static 'js/jquery.flexslider.js' %}"></script>
+	<script type="text/javascript">
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+	<!--End-slider-script-->
+
+	
+{% endblock %}

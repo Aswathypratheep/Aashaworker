@@ -1,0 +1,91 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% extends 'worker_Header_Footer.html' %}
+{% block addmother %}
+{% load static %}
+	<!--script-for-menu-->
+	<!--banner-starts-->
+	<div class="banner-1">
+		
+    </div>
+    {%if message%}
+		<script>
+		
+		alert('{{message}}');
+		
+		</script>
+		{%endif%}
+	<!--banner-end-->
+<!--contact-->
+	<div class="contact-bottom">
+			<form action="#" method="post">
+                    {% csrf_token %}
+<center><h2>ADD MOTHER</h2>
+<br>
+
+		
+        <input placeholder="Mother Name" pattern="[A-Za-z]{1}[A-Za-z\s]{2,32}"  name="mname" type="text" required=""><br><br>
+        <input placeholder="Mother Age" pattern="[0-9]{2}"  name="mage" type="number" required=""><br><br>
+        <textarea placeholder="Address" name="maddress" style="width: 50%;"></textarea><br><br>
+      
+        <input placeholder="Phone number" pattern="[0-9]{10}" maxlength="10"  name="mphone" type="text" required=""><br><br>
+        <div class="submit-btn">
+        <input type="submit" value="Add Mother" ><br><br></center>
+    </div>            
+    </form>
+			
+                              
+			</div>
+			
+		</div>
+	</div>
+<!--contact-->
+<script>
+    $("#district").change(function () {
+        var c=0
+        debugger;
+        var entity=new Array();
+        var cid = $("#district").val();
+        //alert(cid);
+
+       //var data = JSON.stringify(entity);
+                     var urls='/panchayathlistview/?d_id=' + cid ;
+        $.ajax({
+           
+            url: urls,
+            /*data: data,
+            dataType: "JSON",
+            contentType: "Application/json",*/
+           /* success: function (data) {
+                alert('success');
+
+            },
+            error: function (xhr, status, error) {
+                debugger;
+            }*/
+            success: function(data){
+                //alert(data);
+               $('select[name=panchayathlist]').empty()
+               $.each(data, function(index, text){                            
+                   $('select[name=panchayathlist]').append(
+                   $('<option></option>').val(text).html(text)
+                   );                       
+                  });                        
+                 }                       
+
+           })
+          
+        })
+    
+
+</script>
+{% if messages %}
+{% for  msg in messages %}
+<script>alert("{{msg}}")</script>
+{% endfor %}
+{% endif %}
+{% endblock %}

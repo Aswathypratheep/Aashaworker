@@ -1,0 +1,145 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Baby Care a Society & People Flat Bootstrap responsive Website Template | Home :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Baby Care Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='{% static "css/bootstrap.css" %}' rel='stylesheet' type='text/css' />
+<link href='{% static "css/style.css" %}' rel='stylesheet' type='text/css' />
+<link href='{% static "css/owl.carousel.css" %}' rel="stylesheet">
+<script src='{% static "js/jquery.min.js" %}'></script>
+<!--JS for animate-->
+	<link href='{% static "css/animate.css" %}' rel="stylesheet" type="text/css" media="all">
+	<script src='{% static "js/wow.min.js" %}'></script>
+		<script>
+			new WOW().init();
+		</script>
+	<!--//end-animate-->
+</head>
+<body>
+	<!--header-top-->
+	<div class="header-top">
+		<div class="container">
+			<div class="head-main">
+				
+				<div class="col-md-4 head-middle animated wow fadeInDown animated animated" data-wow-duration="1200ms" data-wow-delay="500ms">
+					<h1><a href="index.html">Baby Care</a></h1>
+				</div>
+				
+				<div class="col-md-4 head-left wow fadeInRight animated" data-wow-delay=".5s">
+					<ul>
+						<li><a href="#"><span class="fb"> </span></a></li>
+						<li><a href="#"><span class="twit"> </span></a></li>
+						<li><a href="#"><span class="pin"> </span></a></li>
+						<li><a href="#"><span class="rss"> </span></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--header-top-->
+	<!--navigation-starts-->
+	<div class="navigation animated wow fadeInDown animated animated" data-wow-duration="1200ms" data-wow-delay="500ms">
+		<span class="menu"></span> 
+			<ul class="navig cl-effect-16">
+				<li><a href="/workerhome/">Workerhome</a></li>
+				<!-- <li><a href="/govnotification/">Government Notification</a></li> -->
+				<li><a href="/addmother/">Mother</a></li>
+				<li><a href="/alertlink/">Food/Vaccination</a></li>
+				<!-- <li><a href="/healthlink/">Health/Disease</a></li> -->
+				
+				<!-- <li><a href="msg.html">Chat Box</a></li> -->
+                <li><a href="/login/">Logout</a></li>
+
+			</ul>
+    </div>
+    {% block Workerhome %}
+    {% endblock %}
+
+    {% block gov_notif %}
+    {% endblock %}
+
+    {% block addmother %}
+    {% endblock %}
+
+    {% block mother_link %}
+    {% endblock %}
+
+    {% block viewmother %}
+    {% endblock %}
+
+    {% block alert_link %}
+    {% endblock %}
+
+    {% block addvacc %}
+    {% endblock %}
+
+    {% block viewvacci %}
+    {% endblock %}
+
+    {% block addfood %}
+    {% endblock %}
+
+    {% block viewfood %}
+    {% endblock %}
+
+    {% block health_link %}
+    {% endblock %}
+
+
+    {% block health_tips %}
+    {% endblock %}
+
+
+    {% block viewhealthtips %}
+    {% endblock %}
+
+    {% block adddisease %}
+    {% endblock %}
+
+    {% block view_disease %}
+    {% endblock %}
+    <!--footer-starts-->
+	<div class="footer">
+            <div class="container">
+                <div class="footer-top">
+                <div class="col-md-6 footer-right wow fadeInLeft animated" data-wow-delay=".5s">
+                        <form action="#" method="post">
+                            <input type="text" value="Your Email" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Email';}">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                        <p>© 2016 Baby Care. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                    </div>
+                    <div class="col-md-3 footer-left animated wow fadeInUp animated animated" data-wow-duration="1200ms" data-wow-delay="500ms">
+                        <div class="a-1">
+                            <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                            <p>The company name, Glasglow Dr 40 Fe 72.</p>
+                        </div>
+                        <div class="a-2">
+                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                            <p><a href="mailto:example@email.com">contact@example.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 footer-left wow fadeInRight animated" data-wow-delay=".5s">
+                        <div class="a-1">
+                            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                            <p>+122 265 8822</p>
+                        </div>
+                        <div class="a-2">
+                            <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                            <p>+134 326 3695</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!--footer-end-->
+    </body>
+    </html>

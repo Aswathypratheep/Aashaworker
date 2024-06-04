@@ -1,0 +1,93 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% extends 'worker_Header_Footer.html' %}
+{% block adddisease %}
+{% load static %}
+	<!--script-for-menu-->
+	<!--banner-starts-->
+	<div class="banner-1">
+		
+    </div>
+    {%if message%}
+		<script>
+		
+		alert('{{message}}');
+		
+		</script>
+		{%endif%}
+	<!--banner-end-->
+<!--contact-->
+	<div class="contact-bottom">
+			<form action="#" method="post">
+                    {% csrf_token %}
+<center><h2>ADD DISEASE DETAILS</h2>
+<br>
+
+            <select  id="doctorlist" name="doctorlist" required>
+            {% if doctors %}
+                <option value="">--Choose Doctor--</option>	
+                {% for d in doctors%}	
+                <option value="{{d.0}}">{{d.1}}</option>
+                {% endfor %}
+            {% else %}
+                <option value="">--No Doctors--</option>	
+            {% endif %}
+         </select><br><br>
+        
+        <textarea placeholder="Disease Details" name="ddetails" style="width: 50%;"></textarea><br><br>
+      
+        <div class="submit-btn">
+        <input type="submit" value="Submit Details" ><br><br></center>
+    </div>            
+    </form>
+			
+                              
+			</div>
+			
+		</div>
+	</div>
+<!--contact-->
+<script>
+    $("#district").change(function () {
+        var c=0
+        debugger;
+        var entity=new Array();
+        var cid = $("#district").val();
+        //alert(cid);
+
+       //var data = JSON.stringify(entity);
+                     var urls='/panchayathlistview/?d_id=' + cid ;
+        $.ajax({
+           
+            url: urls,
+            /*data: data,
+            dataType: "JSON",
+            contentType: "Application/json",*/
+           /* success: function (data) {
+                alert('success');
+
+            },
+            error: function (xhr, status, error) {
+                debugger;
+            }*/
+            success: function(data){
+                //alert(data);
+               $('select[name=panchayathlist]').empty()
+               $.each(data, function(index, text){                            
+                   $('select[name=panchayathlist]').append(
+                   $('<option></option>').val(text).html(text)
+                   );                       
+                  });                        
+                 }                       
+
+           })
+          
+        })
+    
+
+</script>
+{% endblock %}

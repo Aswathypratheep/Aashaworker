@@ -1,0 +1,59 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% extends 'worker_Header_Footer.html' %}
+{% block viewmother %}
+{% load static %}
+	<!--script-for-menu-->
+	<!--banner-starts-->
+	<div class="banner-1">
+		
+	</div>
+	<!--banner-end-->
+<!--contact-->
+<style>
+table {
+  width: 78%;
+  background-color:darkgray;
+  padding: 10px;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+button {background-color: #f44336;}
+</style>
+	<center><div class="Registeration">
+		<br><br><br>
+
+        <h1 style="font-family: monospace">MOTHER LIST</h1>
+        <table border="1">
+            <th>Slno</th>
+            <th>Mother Name </th>
+            <th>Age</th>
+            <th>Address</th>
+
+            <th>Phone Number</th>
+            <th>Delete</th>
+            
+            {%for d in data%}
+            <tr>
+                <td>{{d.0}}</td>
+                <td>{{d.2}}</td>
+                <td>{{d.3}}</td>
+                <td>{{d.4}}</td>
+                <td>{{d.11}}</td>
+                <td><a href="/deletemother?mr_id={{d.0}}" >Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+
+</div>
+</center>
+<br><br><br>
+{% endblock %}

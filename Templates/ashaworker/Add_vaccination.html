@@ -1,0 +1,86 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% extends 'worker_Header_Footer.html' %}
+{% block addvacc %}
+{% load static %}
+	<!--script-for-menu-->
+	<!--banner-starts-->
+	<div class="banner-1">
+		
+    </div>
+    {%if message%}
+		<script>
+		
+		alert('{{message}}');
+		
+		</script>
+		{%endif%}
+	<!--banner-end-->
+<!--contact-->
+	<div class="contact-bottom">
+			<form action="#" method="post">
+                    {% csrf_token %}
+<center><h2>ADD VACCINATION</h2>
+<br>
+
+		
+        <input placeholder="vaccination Name" pattern="[A-Za-z]{1}[A-Za-z\s]{2,32}"  name="vacname" type="text" required=""><br><br>
+        <textarea placeholder="Details" name="vdetails" style="width: 50%;"></textarea><br><br>
+       <input type="time" name="vactime" placeholder="Time" ><br><br>
+        <input  name="vacdate" type="date" required=""><br><br>
+        <input placeholder="Location" pattern="[A-Za-z]{1}[A-Za-z\s]{2,32}"  name="vacloc" type="text" required=""><br><br>
+        <div class="submit-btn">
+        <input type="submit" value="Add Vaccination" ><br><br></center>
+    </div>            
+    </form>
+			
+                              
+			</div>
+			
+		</div>
+	</div>
+<!--contact-->
+<script>
+    $("#district").change(function () {
+        var c=0
+        debugger;
+        var entity=new Array();
+        var cid = $("#district").val();
+        //alert(cid);
+
+       //var data = JSON.stringify(entity);
+                     var urls='/panchayathlistview/?d_id=' + cid ;
+        $.ajax({
+           
+            url: urls,
+            /*data: data,
+            dataType: "JSON",
+            contentType: "Application/json",*/
+           /* success: function (data) {
+                alert('success');
+
+            },
+            error: function (xhr, status, error) {
+                debugger;
+            }*/
+            success: function(data){
+                //alert(data);
+               $('select[name=panchayathlist]').empty()
+               $.each(data, function(index, text){                            
+                   $('select[name=panchayathlist]').append(
+                   $('<option></option>').val(text).html(text)
+                   );                       
+                  });                        
+                 }                       
+
+           })
+          
+        })
+    
+
+</script>
+{% endblock %}

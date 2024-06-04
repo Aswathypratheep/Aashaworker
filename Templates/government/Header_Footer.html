@@ -1,0 +1,115 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Baby Care a Society & People Flat Bootstrap responsive Website Template | Home :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Baby Care Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='{% static "css/bootstrap.css" %}' rel='stylesheet' type='text/css' />
+<link href='{% static "css/style.css" %}' rel='stylesheet' type='text/css' />
+<link href='{% static "css/owl.carousel.css" %}' rel="stylesheet">
+<script src='{% static "js/jquery.min.js" %}'></script>
+<!--JS for animate-->
+	<link href='{% static "css/animate.css" %}' rel="stylesheet" type="text/css" media="all">
+	<script src='{% static "js/wow.min.js" %}'></script>
+		<script>
+			new WOW().init();
+		</script>
+	<!--//end-animate-->
+</head>
+<body>
+	<!--header-top-->
+	<div class="header-top">
+		<div class="container">
+			<div class="head-main">
+				
+				<div class="col-md-4 head-middle animated wow fadeInDown animated animated" data-wow-duration="1200ms" data-wow-delay="500ms">
+					<h1><a href="index.html">Baby Care</a></h1>
+				</div>
+				
+				<div class="col-md-4 head-left wow fadeInRight animated" data-wow-delay=".5s">
+					<ul>
+						<!-- <li><a href="#"><span class="fb"> </span></a></li>
+						<li><a href="#"><span class="twit"> </span></a></li>
+						<li><a href="#"><span class="pin"> </span></a></li>
+						<li><a href="#"><span class="rss"> </span></a></li> -->
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--header-top-->
+	<!--navigation-starts-->
+	<div class="navigation animated wow fadeInDown animated animated" data-wow-duration="1200ms" data-wow-delay="500ms">
+		<span class="menu"></span> 
+			<ul class="navig cl-effect-16">
+				<li><a href="/adminhome/">Adminhome</a></li>
+				<li><a href="/panchayathreg/">Panchayath</a></li>
+				<!-- <li><a href="/workerreg/">Worker</a></li> -->
+				<li><a href="/projectlink/">Projects</a></li>
+				<!-- <li><a href="/adddoctor/">Docter</a></li> -->
+                <li><a href="/allviews/">View</a></li>
+                <li><a href="/login/">Logout</a></li>
+
+			</ul>
+    </div>
+    {% block AdminHome %}
+    {% endblock %}
+
+    {% block panchayathlink %}
+    {% endblock %}
+
+    {% block panchayathreg %}
+    {% endblock %}
+
+    {% block viewpanchayath %}
+    {% endblock %}
+
+    {% block workerlink %}
+    {% endblock %}
+
+    {% block workerreg %}
+    {% endblock %}
+
+    {% block projectlink %}
+    {% endblock %}
+
+    {% block viewworker %}
+    {% endblock %}
+
+    {% block addproject %}
+    {% endblock %}
+
+    {% block viewprojects %}
+    {% endblock %}
+
+    {% block doctorlink %}
+    {% endblock %}
+
+    {% block viewdoctor %}
+    {% endblock %}
+    
+    {% block viewlink %}
+    {% endblock %}
+
+    {% block view_vacc %}
+    {% endblock %}
+
+    {% block view_food %}
+    {% endblock %}
+
+    {% block view_disease %}
+    {% endblock %}
+
+    {% block view_health %}
+    {% endblock %}
+    <!--footer-starts-->
+
+        <!--footer-end-->
+    </body>
+    </html>

@@ -1,0 +1,137 @@
+
+{% load static %}
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Baby Care a Society & People Flat Bootstrap responsive Website Template | Home :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Baby Care Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='{% static "css/bootstrap.css" %}' rel='stylesheet' type='text/css' />
+<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />
+<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+<script src='{% static "js/jquery.min.js" %}'></script>
+<!--JS for animate-->
+	<link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css" media="all">
+	<script src="{% static 'js/wow.min.js' %}"></script>
+		<script>
+			new WOW().init();
+		</script>
+	<!--//end-animate-->
+</head>
+<body>
+	<!--header-top-->
+	<div class="header-top">
+		<div class="container">
+			<div class="head-main">
+				
+				<div class="col-md-4 head-middle animated wow fadeInDown animated animated" data-wow-duration="1200ms" data-wow-delay="500ms">
+					<h1><a href="index.html">Baby Care</a></h1>
+				</div>
+				
+				<div class="col-md-4 head-left wow fadeInRight animated" data-wow-delay=".5s">
+					<ul>
+						<!-- <li><a href="#"><span class="fb"> </span></a></li>
+						<li><a href="#"><span class="twit"> </span></a></li>
+						<li><a href="#"><span class="pin"> </span></a></li>
+						<li><a href="#"><span class="rss"> </span></a></li> -->
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--header-top-->
+	<!--navigation-starts-->
+	<div class="navigation animated wow fadeInDown animated animated" data-wow-duration="1200ms" data-wow-delay="500ms">
+		<span class="menu"></span> 
+			<ul class="navig cl-effect-16">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="login/">Login</a></li>
+			</ul>
+	</div>
+	<!--navigation-end-->
+	<!--script-for-menu-->
+		<script>
+			$("span.menu").click(function(){
+				$(" ul.navig").slideToggle("slow" , function(){
+				});
+			});
+		</script>
+	<!--script-for-menu-->
+	<!--banner-starts-->
+	<div class="banner">
+		<section class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+					<li>
+					<div class="banner1">
+						<div class="container">
+							<div class="banner-text">
+								<p>Baby Care</p>
+								<h3>We are caring your baby</h3>
+							</div>
+						</div>
+					</div>
+					</li>
+					<li>
+					<div class="banner2">
+						<div class="container">
+							<div class="banner-text">
+								<p>Baby Care</p>
+								<h3>Caring your lotus</h3>
+							</div>
+						</div>
+					</div>
+					</li>
+					<li>
+					<div class="banner1">
+						<div class="container">
+							<div class="banner-text">
+								<p>Baby Care</p>
+								<h3>Caring your kids</h3>
+							</div>
+						</div>
+					</div>
+					</li>
+					<li>
+					<div class="banner2">
+						<div class="container">
+							<div class="banner-text">
+								<p>Baby Care</p>
+								<h3>Also have neutresious food here</h3>
+							</div>
+						</div>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+	<!--banner-end-->
+	<!--FlexSlider-->
+	<link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="screen" />
+	<script defer src='{% static "js/jquery.flexslider.js" %}'></script>
+	<script type="text/javascript">
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+	<!--End-slider-script-->
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% extends 'Header_Footer.html' %}
+{% block panchayathreg %}
+{% load static %}
+	<div class="banner-1">
+		
+	</div>
+	<!--banner-end-->
+<!--contact-->
+
+{%if message%}
+		<script>
+		
+		alert('{{message}}');
+		
+		</script>
+		{%endif%}
+<center>
+	<div class="contact-bottom">
+			<form action="#" method="post">
+					{% csrf_token %}
+<h2>PANCHAYATH REGISTRATION</h2>
+<br>
+				<input placeholder="Panchayath Name" pattern="[A-Za-z]{1}[A-Za-z\s]{2,32}" name="pname" type="text" required=""><br><br>
+
+				<select name="district" required >
+										 <option value="">--Select District--</option>
+                                         <option>Kasargode</option>
+                                         <option>Kannur</option>
+                                         <option>Vayanad</option>
+                                         <option>Malappuram</option>
+                                         <option>Kottayam</option>
+                                         <option>Kozhikod</option>
+                                         <option>Ernakulam</option>
+                                         <option>Pathanamthitta</option>
+                                         <option>Alappuzha</option>
+                                         <option>Idukki</option>
+                                         <option>Palakkad</option>
+                                         <option>Thrissur</option>
+                                         <option>Kollam</option>
+                                         <option>Thiruvananthapuram</option>
+					 </select><br><br>
+		<input placeholder="Number of wards" name="wno" type="number" maxlength="3" required=""><br><br>
+		<input placeholder="Number of houses" name="hno" type="number" required=""><br><br>
+		<input placeholder="Name of president" name="president"  pattern="[A-Za-z]{1}[A-Za-z\s]{2,32}" type="text" required=""><br><br>
+		<textarea placeholder="Address of panchayath" name="address" style="width: 50%;"></textarea><br><br>
+		<input placeholder="Email" name="email" type="email" required="" ><br><br>
+		<input placeholder="Phone number" name="phn" type="text" maxlength="10" pattern="[789][0-9]{9}" required=""><br><br>
+		<div class="submit-btn">
+					
+				<input type="submit" value="REGISTER">
+			</form>
+		</div>
+			<br><br>
+                              
+			</div>
+		</center>
+			
+		</div>
+	</div>
+<!--contact-->
+{% if messages %}
+{% for  msg in messages %}
+<script>alert("{{msg}}")</script>
+{% endfor %}
+{% endif %}
+{% endblock %}

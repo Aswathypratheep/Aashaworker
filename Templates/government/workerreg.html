@@ -1,0 +1,116 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% extends 'Doctor_Header_Footer.html' %}
+{% block mother123 %}
+{% load static %}
+	<!--script-for-menu-->
+	<!--banner-starts-->
+	<div class="banner-1">
+		
+    </div>
+    {%if message%}
+		<script>
+		
+		alert('{{message}}');
+		
+		</script>
+		{%endif%}
+	<!--banner-end-->
+<!--contact-->
+	<div class="contact-bottom">
+			<form action="#" method="post">
+                    {% csrf_token %}
+<center><h2>WORKER REGISTRATION</h2>
+<br>
+
+			<select name="district" id="district">
+											<option>--Choose District--</option>
+                                         <option>Kasargode</option>
+                                         <option>Kannur</option>
+                                         <option>Vayanad</option>
+                                         <option>Malappuram</option>
+                                         <option>Kottayam</option>
+                                         <option>Kozhikod</option>
+                                         <option>Ernakulam</option>
+                                         <option>Pathanamthitta</option>
+                                         <option>Alappuzha</option>
+                                         <option>Idukki</option>
+                                         <option>Palakkad</option>
+                                         <option>Thrissur</option>
+                                         <option>Kollam</option>
+                                         <option>Thiruvananthapuram</option>
+					 </select><br><br>
+					 
+
+			<select  id="panchayathlist" name="panchayathlist">
+                {% for d in data %}
+                <option>--Choose Panchayath--</option>		
+                <option value="{{d.id}}">{{d.name}}</option>
+                                     {% endfor %}     
+					 </select><br><br>
+		<input placeholder=" Worker Name" pattern="[A-Za-z]{1}[A-Za-z\s]{2,32}"  name="wnamee" type="text" required=""><br><br>
+		<input placeholder="Phone number" name="wphnu" type="text" pattern="[789][0-9]{9}" required=""><br><br>
+		<input placeholder="Ward number" name="wan" type="number" maxlength="3" required=""><br><br>
+		<textarea placeholder="Address of worker" name="waddress" style="width: 50%;"></textarea><br><br>
+		<input placeholder="Email" name="wmail" type="email" required=""><br><br>
+		<input placeholder="Qualification" pattern="[A-Za-z]{1}[A-Za-z\s]{2,32}" name="qul" type="text" required=""><br><br>
+        <div class="submit-btn">
+        <input type="submit" value="Register" onClick="success.html"><br><br></center>
+    </div>            
+    </form>
+			
+                              
+			</div>
+			
+		</div>
+	</div>
+<!--contact-->
+<script>
+    $("#district").change(function () {
+        var c=0
+        debugger;
+        var entity=new Array();
+        var cid = $("#district").val();
+        //alert(cid);
+
+       //var data = JSON.stringify(entity);
+                     var urls='/panchayathlistview/?d_id=' + cid ;
+        $.ajax({
+           
+            url: urls,
+            /*data: data,
+            dataType: "JSON",
+            contentType: "Application/json",*/
+           /* success: function (data) {
+                alert('success');
+
+            },
+            error: function (xhr, status, error) {
+                debugger;
+            }*/
+            success: function(data){
+                //alert(data);
+               $('select[name=panchayathlist]').empty()
+               $.each(data, function(index, text){                            
+                   $('select[name=panchayathlist]').append(
+                   $('<option></option>').val(text).html(text)
+                   );                       
+                  });                        
+                 }                       
+
+           })
+          
+        })
+    
+
+</script>
+{% if messages %}
+{% for  msg in messages %}
+<script>alert("{{msg}}")</script>
+{% endfor %}
+{% endif %}
+{% endblock %}

@@ -1,0 +1,58 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% extends 'Mother_Header_Footer.html' %} {% block disease_details %} {% load static %}
+<!--script-for-menu-->
+<!--banner-starts-->
+<div class="banner-1"></div>
+<!--banner-end-->
+<!--contact-->
+<style>
+	table {
+		width: 78%;
+		background-color: darkgray;
+		padding: 10px;
+	}
+	th,
+	td {
+		padding: 15px;
+		text-align: left;
+	}
+	button {
+		background-color: #f44336;
+	}
+</style>
+<center>
+	<div class="Registeration">
+		<br /><br /><br />
+
+		<h1 style="font-family: monospace">Book Doctor</h1>
+		<form action="#" method="post">
+			{% csrf_token %}
+			<br />
+            <h5>Date:</h5>
+			<input
+				placeholder="Date"
+				name="date"
+				type="date"
+				required=""
+                style="width: 50%"
+			/><br /><br />
+			<textarea
+				placeholder="Description"
+				name="desc"
+				style="width: 50%"
+                rows="5"
+			></textarea
+			><br /><br />
+			<div class="submit-btn">
+				<input type="submit" value="Book" /><br /><br />
+			</div>
+		</form>
+	</div>
+</center>
+<br /><br /><br />
+{% endblock %}

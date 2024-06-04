@@ -1,0 +1,62 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% extends 'Mother_Header_Footer.html' %}
+{% block disease_details %}
+{% load static %}
+	<!--script-for-menu-->
+	<!--banner-starts-->
+	<div class="banner-1">
+		
+	</div>
+	<!--banner-end-->
+<!--contact-->
+<style>
+table {
+  width: 78%;
+  background-color:darkgray;
+  padding: 10px;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+button {background-color: #f44336;}
+</style>
+	<center><div class="Registeration">
+		<br><br><br>
+
+        <h1 style="font-family: monospace">DISEASE DETAILS LIST</h1>
+        <table border="1">
+            <th>Slno</th>
+            <th>Disease Details</th>
+            <th>Doctor Name</th>
+            <th>Qualification</th>
+            <th>Addess</th>
+            <th>Phone Number</th>
+            <th>Op Time</th>
+            <th>Book Doctor</th>
+            
+            {%for d in data%}
+            <tr>
+                <td>{{d.0}}</td>
+                <td style="color: red;">{{d.1}}</td>
+                <td>{{d.2}}</td>
+                <td>{{d.3}}</td>
+                <td>{{d.4}}</td>
+                <td>{{d.5}}</td>
+                <td>{{d.6}}</td>
+                <td><a href="/bookDoc?docid={{d.7}}">Book</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+
+
+</div>
+</center>
+<br><br><br>
+{% endblock %}
